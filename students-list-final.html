@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<title>الطلاب المسجلين في مخيم نشاط التدريس الثاني عشر</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #f5f7fb;
+    padding: 20px;
+}
+.container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 14px;
+    max-width: 900px;
+    margin: auto;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+h2 {
+    margin-top: 0;
+    text-align: center;
+    color: #8B4513;
+}
+.note {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 15px;
+    color: #444;
+}
+.filters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 10px;
+    margin-top: 15px;
+}
+input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    font-size: 15px;
+}
+count {
+    color: #8B4513;
+}
+input:focus {
+    outline: none;
+    border-color: #8B4513;
+    box-shadow: 0 0 0 1px #8B451355;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 18px;
+    font-size: 15px;
+}
+table th, table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #e5e7eb;
+}
+table th {
+    background: #8B4513;
+    color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+tbody tr:nth-child(odd) {
+    background-color: #f9fafb;
+}
+.count-badge {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #8B4513;
+    font-weight: bold;
+}
+.table-wrapper {
+    max-height: 500px;
+    overflow-y: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>الطلاب المسجلين في مخيم نشاط التدريس الثاني عشر</h2>
+
+    <p class="count-badge">عدد الطلاب المسجلين: 263</p>
+
+    <div class="filters">
+        <div>
+            <label for="nameSearch">بحث بالاسم:</label>
+            <input type="text" id="nameSearch" placeholder="اكتب جزء من الاسم">
+        </div>
+        <div>
+            <label for="classSearch">بحث بالصف:</label>
+            <input type="text" id="classSearch" placeholder="مثال: 4 أو 5">
+        </div>
+    </div>
+
+    <div class="table-wrapper">
+        <table id="studentsTable">
+            <thead>
+                <tr>
+                    <th>اسم الطالب</th>
+                    <th>الصف</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>أحمد سعيد صادق اللواتي</td><td>4</td></tr>
+<tr><td>أدهم عباس عبدالله العجمي</td><td>4</td></tr>
+<tr><td>حسام مظاهر محمد العبدواني</td><td>4</td></tr>
+<tr><td>حسين علي حسين الشالواني</td><td>4</td></tr>
+<tr><td>حيدرة عبدالله محمد أمين اللواتي</td><td>4</td></tr>
+<tr><td>سلطان احمد مقبول اللواتي</td><td>4</td></tr>
+<tr><td>عبدالله حسين محمد امين اللواتي</td><td>4</td></tr>
+<tr><td>عبدالله فرج عبدالفتاح اللواتي</td><td>4</td></tr>
+<tr><td>عزان محمد مرتضى العيساني</td><td>4</td></tr>
+<tr><td>علي أحمد خصيف المحرزي</td><td>4</td></tr>
+<tr><td>علي حسن محمد اللواتي</td><td>4</td></tr>
+<tr><td>علي حسن ياسين اللواتي</td><td>4</td></tr>
+<tr><td>علي حسين مشهور العصفور</td><td>4</td></tr>
+<tr><td>علي حيدر مصطفى اللواتي</td><td>4</td></tr>
+<tr><td>علي رضا علي عبدواني</td><td>4</td></tr>
+<tr><td>علي عقيل أحمد اللواتي</td><td>4</td></tr>
+<tr><td>علي عماد علي العبدواني</td><td>4</td></tr>
+<tr><td>علي محمد حسن اللواتي</td><td>4</td></tr>
+<tr><td>علي محمد حسن بن داود اللواتي</td><td>4</td></tr>
+<tr><td>علي ميثم حسن الشيدي</td><td>4</td></tr>
+<tr><td>ليث آحمد حسين اللواتي</td><td>4</td></tr>
+<tr><td>مالك محمد مرتضى اللواتي</td><td>4</td></tr>
+<tr><td>محمد حمد مرتضى اللواتي</td><td>4</td></tr>
+<tr><td>محمد عدنان محمد اللواتي</td><td>4</td></tr>
+<tr><td>محمد مصطفى تقي اللواتي</td><td>4</td></tr>
+<tr><td>مهدي علي ناصر اللواتي</td><td>4</td></tr>
+<tr><td>هادي إحسان طاهر ساجواني</td><td>4</td></tr>
+<tr><td>هادي محمد موسى اللواتي</td><td>4</td></tr>
+<tr><td>ياسين منذر عباس البحراني</td><td>4</td></tr>
+<tr><td>أحمد عون عبدالله العجمي</td><td>5</td></tr>
+<tr><td>أحمد هادي محمد اللواتي</td><td>5</td></tr>
+<tr><td>الحسن مجتبى يوسف العجمي</td><td>5</td></tr>
+<tr><td>الحسين علي أحمد العجمي</td><td>5</td></tr>
+<tr><td>المنتظر مازن إبراهيم البحراني</td><td>5</td></tr>
+<tr><td>أمير سامي أحمد اللواتي</td><td>5</td></tr>
+<tr><td>باسل سلمان حسين اللواتي</td><td>5</td></tr>
+<tr><td>بسام علي مرتضى اللواتي</td><td>5</td></tr>
+<tr><td>تيمور علي جعفر اللواتي</td><td>5</td></tr>
+<tr><td>حسن ميثم موسى اللواتي</td><td>5</td></tr>
+<tr><td>حسن هيثم محمود العجمي</td><td>5</td></tr>
+<tr><td>حسين طاهر سليمان العبري</td><td>5</td></tr>
+<tr><td>حسين علي أحمد ناجواني</td><td>5</td></tr>
+<tr><td>حسين علي محمد الفريد</td><td>5</td></tr>
+<tr><td>حسين عيسى جعفر البحراني</td><td>5</td></tr>
+<tr><td>حسين محمد جعفر اللواتي</td><td>5</td></tr>
+<tr><td>حمزة زهير عدنان اللواتي</td><td>5</td></tr>
+<tr><td>حيدر عبدالخالق حيدر اللواتي</td><td>5</td></tr>
+<tr><td>عباس صادق توفيق اللواتي</td><td>5</td></tr>
+<tr><td>عبدالله علي عبدالله اللواتي</td><td>5</td></tr>
+<tr><td>علي احمد حسن اللواتي</td><td>5</td></tr>
+<tr><td>علي بهاء محمدرضا اللواتي</td><td>5</td></tr>
+<tr><td>علي حسين انور اللواتي</td><td>5</td></tr>
+<tr><td>علي رضا محمد الشالواني</td><td>5</td></tr>
+<tr><td>علي صادق امين الخابوري</td><td>5</td></tr>
+<tr><td>علي محمد جعفر ناجواني</td><td>5</td></tr>
+<tr><td>علي محمد عبدالله الخابوري</td><td>5</td></tr>
+<tr><td>علي مرتضى عبدالخالق اللواتي</td><td>5</td></tr>
+<tr><td>علي ميثم حيدر اللواتي</td><td>5</td></tr>
+<tr><td>قاسم حسين فياض اللواتي</td><td>5</td></tr>
+<tr><td>قاسم مصطفى محمد ظفر الله محد زكاء الله</td><td>5</td></tr>
+<tr><td>محمد احمد عماد اللواتي</td><td>5</td></tr>
+<tr><td>محمد جعفر صادق اللواتي</td><td>5</td></tr>
+<tr><td>محمد حسين علي اللواتي</td><td>5</td></tr>
+<tr><td>محمد طه مصطفى اللواتي</td><td>5</td></tr>
+<tr><td>محمد علي حسين الزعابي</td><td>5</td></tr>
+<tr><td>محمد هاني سالم العجمي</td><td>5</td></tr>
+<tr><td>موسى محمد علي اللواتي</td><td>5</td></tr>
+<tr><td>نبراس ابراهيم عبدالله اللواتي</td><td>5</td></tr>
+<tr><td>هاشم محمد محمد جواد اللواتي</td><td>5</td></tr>
+<tr><td>ياسر عدنان مصطفى اللواتي</td><td>5</td></tr>
+<tr><td>ياسين رضا محمد اللواتي</td><td>5</td></tr>
+<tr><td>يوسف حسين محسن اللواتي</td><td>5</td></tr>
+<tr><td>تيم علي محمد رضا نور الدين</td><td>6</td></tr>
+<tr><td>جعفر محمد علي ناجواني</td><td>6</td></tr>
+<tr><td>حسن علي حسن اللواتي </td><td>6</td></tr>
+<tr><td>حسن محمد أنور اللواتي</td><td>6</td></tr>
+<tr><td>حسين حسن مرتضى اللواتي</td><td>6</td></tr>
+<tr><td>حسين قاسم علي اللواتي</td><td>6</td></tr>
+<tr><td>حسين محمد حسن اللواتي</td><td>6</td></tr>
+<tr><td>حسين منتظر مرتضى الزعابي</td><td>6</td></tr>
+<tr><td>حميد يوسف عبدالحسين اللواتي</td><td>6</td></tr>
+<tr><td>حيدر علي محمد حسين</td><td>6</td></tr>
+<tr><td>حيدر مظاهر محمد العبدواني</td><td>6</td></tr>
+<tr><td>زيد علي طالب آلداود</td><td>6</td></tr>
+<tr><td>سلطان فلاح الطف اللواتي</td><td>6</td></tr>
+<tr><td>علي الأكبر حسين محمد اللواتي</td><td>6</td></tr>
+<tr><td>علي حسن علي ببواني</td><td>6</td></tr>
+<tr><td>علي حسين محمد جواد اللواتي</td><td>6</td></tr>
+<tr><td>علي عابدين حسن اللواتي</td><td>6</td></tr>
+<tr><td>علي مهند عبدالأمير اللواتي</td><td>6</td></tr>
+<tr><td>علي هادي محمد اللواتي</td><td>6</td></tr>
+<tr><td>علي هاني حسن اللواتي</td><td>6</td></tr>
+<tr><td>عمار علي محمد حسن تقي</td><td>6</td></tr>
+<tr><td>ماجد علي محمد جواد فاضل</td><td>6</td></tr>
+<tr><td>محمد حسين داود اللواتي</td><td>6</td></tr>
+<tr><td>محمد حسين مرتضى اللواتي</td><td>6</td></tr>
+<tr><td>محمد صادق حسن اللواتي</td><td>6</td></tr>
+<tr><td>محمد عزيز محمد اللواتي</td><td>6</td></tr>
+<tr><td>محمد علي عبدالله اللواتي</td><td>6</td></tr>
+<tr><td>محمد علي مرتضى اللواتي</td><td>6</td></tr>
+<tr><td>محمد عمار أحمد اللواتي</td><td>6</td></tr>
+<tr><td>محمد مجتبى جعفر اللواتي</td><td>6</td></tr>
+<tr><td>ملهم محمد مرتضى اللواتي</td><td>6</td></tr>
+<tr><td>ياسر حسين مصطفى الزعابي</td><td>6</td></tr>
+<tr><td>يحيى حسين مصطفى الزعابي</td><td>6</td></tr>
+<tr><td>يوسف أحمد حسن اللواتي</td><td>6</td></tr>
+<tr><td>يوسف علي علي باقر سليمان جعفر اللواتي</td><td>6</td></tr>
+<tr><td>أحمد موسى علي الهنائي</td><td>7</td></tr>
+<tr><td>جعفر محمد جعفر العبدواني</td><td>7</td></tr>
+<tr><td>جواد نبيل جواد اللواتي</td><td>7</td></tr>
+<tr><td>حسين جهاد رضا اللواتي</td><td>7</td></tr>
+<tr><td>حسين حسن عبدالله العجمي</td><td>7</td></tr>
+<tr><td>حسين علي محمد اللواتي</td><td>7</td></tr>
+<tr><td>حسين محمد فدا حسين اللواتي</td><td>7</td></tr>
+<tr><td>حمدان محمد عبدالله الخابوري</td><td>7</td></tr>
+<tr><td>حيدر عمران حيدر اللواتي</td><td>7</td></tr>
+<tr><td>ساجد حسن تقي الزعابي</td><td>7</td></tr>
+<tr><td>طارق حسن علي الزعابي</td><td>7</td></tr>
+<tr><td>طه علاء حسن اللواتي</td><td>7</td></tr>
+<tr><td>عباس حسين فياض اللواتي</td><td>7</td></tr>
+<tr><td>عباس ساقي طالب اللواتي</td><td>7</td></tr>
+<tr><td>عباس محمد رضا الخابوري</td><td>7</td></tr>
+<tr><td>عبد الله حسين تقي الزعابي</td><td>7</td></tr>
+<tr><td>علوي يوسف عبدالحسين اللواتي</td><td>7</td></tr>
+<tr><td>علي حسن موسى اللواتي</td><td>7</td></tr>
+<tr><td>علي حسين علي اللواتي</td><td>7</td></tr>
+<tr><td>علي عباس حسين العبدواني</td><td>7</td></tr>
+<tr><td>علي عبد الكاظم حمد مبارك</td><td>7</td></tr>
+<tr><td>علي علي حيدر اللواتي</td><td>7</td></tr>
+<tr><td>علي هاشم عبدالله اللواتي</td><td>7</td></tr>
+<tr><td>محمد أحمد مرتضى اللواتي</td><td>7</td></tr>
+<tr><td>محمد توفيق مصطفى اللواتي</td><td>7</td></tr>
+<tr><td>محمد جعفر محمد اللواتي</td><td>7</td></tr>
+<tr><td>محمد حسن محمد المتواني</td><td>7</td></tr>
+<tr><td>محمد حسن محمد تقي اللواتي</td><td>7</td></tr>
+<tr><td>محمد حسين عبدالرضا اللواتي</td><td>7</td></tr>
+<tr><td>محمد صادق عيسى الفيروز</td><td>7</td></tr>
+<tr><td>محمد علي حيدر اللواتي</td><td>7</td></tr>
+<tr><td>محمد فداحسين طالب اللواتي</td><td>7</td></tr>
+<tr><td>مرتضى عباس كرار اللواتي</td><td>7</td></tr>
+<tr><td>مهدي علاء حسن اللواتي</td><td>7</td></tr>
+<tr><td>ميثم محسن محمد تقي اللواتي</td><td>7</td></tr>
+<tr><td>هشام سليمان هلال السليماني</td><td>7</td></tr>
+<tr><td>يحيى سليمان حسن البلوشي</td><td>7</td></tr>
+<tr><td>يزن عدنان مصطفى اللواتي</td><td>7</td></tr>
+<tr><td>أحمد ساقي طالب اللواتي</td><td>8</td></tr>
+<tr><td>أحمد علي محمد حسن تقي</td><td>8</td></tr>
+<tr><td>آدم علي محمد اللواتي</td><td>8</td></tr>
+<tr><td>انس ياسر حبيب اللواتي </td><td>8</td></tr>
+<tr><td>جواد فهيم حسين المقدسي</td><td>8</td></tr>
+<tr><td>حارث مصطفى محمد اللواتي</td><td>8</td></tr>
+<tr><td>حسن رضا محمد ساجواني</td><td>8</td></tr>
+<tr><td>حسن محمد جعفر اللواتي</td><td>8</td></tr>
+<tr><td>حسين عادل محمد جواد اللواتي</td><td>8</td></tr>
+<tr><td>حسين ياسين أحمد اللواتي</td><td>8</td></tr>
+<tr><td>حمزة حسين محمد اللواتي</td><td>8</td></tr>
+<tr><td>زيد مصطفى محمد اللواتي</td><td>8</td></tr>
+<tr><td>طه محمد علي اللواتي</td><td>8</td></tr>
+<tr><td>عبدالله محمد احمد المهدي</td><td>8</td></tr>
+<tr><td>عزان حسن محبوب اللواتي</td><td>8</td></tr>
+<tr><td>علي حسن محبوب اللواتي</td><td>8</td></tr>
+<tr><td>علي حسين محمد امين اللواتي</td><td>8</td></tr>
+<tr><td>علي زهير عدنان اللواتي</td><td>8</td></tr>
+<tr><td>علي مصطفى جمعة اللواتي</td><td>8</td></tr>
+<tr><td>علي ياسين محمد اللواتي</td><td>8</td></tr>
+<tr><td>عيسى حسين علي اللواتي</td><td>8</td></tr>
+<tr><td>فارس مازن علي اللواتي</td><td>8</td></tr>
+<tr><td>فراس حسن محمد اللواتي</td><td>8</td></tr>
+<tr><td>كرار حسين عبدالله العجمي</td><td>8</td></tr>
+<tr><td>محمد احسان صادق اللواتي</td><td>8</td></tr>
+<tr><td>محمد علي عبدالحسين اللواتي</td><td>8</td></tr>
+<tr><td>محمد مصطفى غلام علي اللواتي</td><td>8</td></tr>
+<tr><td>مصطفى علي مرتضى اللواتي</td><td>8</td></tr>
+<tr><td>هادي علي ناصر اللواتي</td><td>8</td></tr>
+<tr><td>هاشم محمود عبدالرزاق اللواتي</td><td>8</td></tr>
+<tr><td>وهب فائز محمد ال رحمة</td><td>8</td></tr>
+<tr><td>الحسين يوسف حسن البلوشي</td><td>9</td></tr>
+<tr><td>المنهال محسن محمد تقي اللواتي</td><td>9</td></tr>
+<tr><td>أمير رضا أحمد اللواتي</td><td>9</td></tr>
+<tr><td>أيهم طه حسين اللواتي</td><td>9</td></tr>
+<tr><td>توفيق علي مرتضى اللواتي</td><td>9</td></tr>
+<tr><td>حسين خليل جمعة اللواتي</td><td>9</td></tr>
+<tr><td>حسين علي خالد علي</td><td>9</td></tr>
+<tr><td>حسين علي عبدالحسين اللواتي</td><td>9</td></tr>
+<tr><td>حسين مجتبى جعفر اللواتي</td><td>9</td></tr>
+<tr><td>عباس فلاح حسن اللواتي</td><td>9</td></tr>
+<tr><td>عباس نبيل محمد اللواتي</td><td>9</td></tr>
+<tr><td>عبدالله عون عبدللله العجمي</td><td>9</td></tr>
+<tr><td>علي حسين مرتضى اللواتي</td><td>9</td></tr>
+<tr><td>علي صادق مصطفى اللواتي</td><td>9</td></tr>
+<tr><td>علي هيثم محمود العجمي</td><td>9</td></tr>
+<tr><td>فراس كميل علي رضا فجواني</td><td>9</td></tr>
+<tr><td>كرار حيدر مصطفى اللواتي</td><td>9</td></tr>
+<tr><td>محمد حسن حسين اللواتي</td><td>9</td></tr>
+<tr><td>محمد سامي احمد اللواتي</td><td>9</td></tr>
+<tr><td>محمد طارق طالب اللواتي</td><td>9</td></tr>
+<tr><td>محمد عباس حسن اللواتي</td><td>9</td></tr>
+<tr><td>محمد علي حسن اللواتي</td><td>9</td></tr>
+<tr><td>محمد علي فدا حسين اللواتي</td><td>9</td></tr>
+<tr><td>محمود مصطفى علي اللواتي</td><td>9</td></tr>
+<tr><td>يوسف حسن أحمد اللواتي</td><td>9</td></tr>
+<tr><td>أحمد عبدالرضا علي العجمي</td><td>10</td></tr>
+<tr><td>أحمد علي عبدالرضا اللواتي</td><td>10</td></tr>
+<tr><td>أحمد مالك محمد الوردي</td><td>10</td></tr>
+<tr><td>الحسن احمد مال الله العجمي</td><td>10</td></tr>
+<tr><td>الحسن يوسف حسن البلوشي</td><td>10</td></tr>
+<tr><td>الحسين علي داود اللواتي</td><td>10</td></tr>
+<tr><td>جعفر حسن عبدالباقي اللواتي</td><td>10</td></tr>
+<tr><td>حسن عبدالله حسن اللواتي</td><td>10</td></tr>
+<tr><td>حسين باسم محمد القبطان</td><td>10</td></tr>
+<tr><td>حسين صادق توفيق اللواتي</td><td>10</td></tr>
+<tr><td>حسين علي عبدالحسين اللواتي</td><td>9</td></tr>
+<tr><td>حسين محمد اسماعيل اللواتي</td><td>10</td></tr>
+<tr><td>حمزة علي محمد حسين</td><td>10</td></tr>
+<tr><td>حمزة ياسين محمد رضا اللواتي</td><td>10</td></tr>
+<tr><td>صالح تقي حسن اللواتي</td><td>10</td></tr>
+<tr><td>عباس حبيب طالب آل داود</td><td>10</td></tr>
+<tr><td>عبدالفتاح فرج عبدالفتاح اللواتي</td><td>10</td></tr>
+<tr><td>علي حسن محمد المتواني</td><td>10</td></tr>
+<tr><td>علي رضا غلام علي اللواتي</td><td>10</td></tr>
+<tr><td>علي مصطفى مقبول اللواتي</td><td>10</td></tr>
+<tr><td>علي وحيد مرتضى آل حميد</td><td>10</td></tr>
+<tr><td>علي ياسر محمد رضا اللواتي</td><td>10</td></tr>
+<tr><td>ليث  علي طالب آل داود</td><td>10</td></tr>
+<tr><td>ليث حسن مرتضى اللواتي</td><td>10</td></tr>
+<tr><td>محمد حسن محمد اللواتي</td><td>10</td></tr>
+<tr><td>محمد عبدالخالق حيدر اللواتي</td><td>10</td></tr>
+<tr><td>هادي حيدر محمد رضا اللواتي</td><td>10</td></tr>
+<tr><td>هادي عقيل أحمد اللواتي</td><td>10</td></tr>
+<tr><td>هادي محمود عبدالله اللواتي</td><td>10</td></tr>
+<tr><td>ياسر محمد علي اللواتي</td><td>10</td></tr>
+<tr><td>ياسين محمد أنور اللواتي</td><td>10</td></tr>
+<tr><td>يوسف محمد يوسف العجمي</td><td>10</td></tr>
+<tr><td>يوسف محمود عبدالرازق اللواتي</td><td>10</td></tr>
+<tr><td>يوسف منعم حسن اللواتي</td><td>10</td></tr>
+<tr><td>بسام عدنان محمدتقي اللواتي</td><td>11</td></tr>
+<tr><td>حسن صادق مصطفى اللواتي</td><td>11</td></tr>
+<tr><td>حسن علي أحمد اللواتي</td><td>11</td></tr>
+<tr><td>حسين ماهر حسن اللواتي</td><td>11</td></tr>
+<tr><td>حسين مرتضى محمد علي اللواتي</td><td>11</td></tr>
+<tr><td>رضا علي محمد رضا نور الدين</td><td>11</td></tr>
+<tr><td>صادق حسن عبدالامير اللواتي</td><td>11</td></tr>
+<tr><td>صالح حسن علي الزعابي</td><td>11</td></tr>
+<tr><td>عبدالله ابراهيم عبدالله العجمي</td><td>11</td></tr>
+<tr><td>عبدالله سمير عبدالله البحراني</td><td>11</td></tr>
+<tr><td>علي ابراهيم عبدالله العجمي</td><td>11</td></tr>
+<tr><td>علي حسن تقي الزعابي</td><td>11</td></tr>
+<tr><td>علي حسين عبدالله العجمي</td><td>11</td></tr>
+<tr><td>علي طارق محمد العجمي</td><td>11</td></tr>
+<tr><td>علي عمر علي الفاضل</td><td>11</td></tr>
+<tr><td>علي عون عبدالله العجمي</td><td>11</td></tr>
+<tr><td>علي نبيل عبد المنعم ناجواني</td><td>11</td></tr>
+<tr><td>قيس علي محمد حسن تقي</td><td>11</td></tr>
+<tr><td>محسن علاء حسن اللواتي</td><td>11</td></tr>
+<tr><td>محمد طارق حسن اللواتي</td><td>11</td></tr>
+<tr><td>محمد علي حسين اللواتي</td><td>11</td></tr>
+<tr><td>مهدي بهاء محمدرضا اللواتي</td><td>11</td></tr>
+<tr><td>هادي حسين محسن اللواتب</td><td>11</td></tr>
+<tr><td>وهب احمد عيسى الزدجالي</td><td>11</td></tr>
+<tr><td>ياسين أسامة محمد القبطان</td><td>11</td></tr>
+<tr><td>يوسف حسين موسى اللواتي</td><td>11</td></tr>
+<tr><td>يوسف طلال تقي اللواتي</td><td>11</td></tr>
+<tr><td>يوسف عدنان مصطفى اللواتي</td><td>11</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p class="note">في حال لم تجد اسمك، يرجى التواصل على الرقم: ١٢٣٤٥٦٧٨٩</p>
+</div>
+
+<script>
+function filterStudents() {
+    var nameVal = (document.getElementById("nameSearch").value || "").trim();
+    var classVal = (document.getElementById("classSearch").value || "").trim();
+
+    var table = document.getElementById("studentsTable");
+    var rows = table.getElementsByTagName("tbody")[0].getElementsByTagName("tr");
+    var count = 0;
+
+    for (var i = 0; i < rows.length; i++) {
+        var name = rows[i].getElementsByTagName("td")[0].textContent;
+        var clazz = rows[i].getElementsByTagName("td")[1].textContent;
+
+        var matchName = !nameVal || name.indexOf(nameVal) !== -1;
+        var matchClass = !classVal || clazz.indexOf(classVal) !== -1;
+
+        if (matchName && matchClass) {
+            rows[i].style.display = "";
+            count++;
+        } else {
+            rows[i].style.display = "none";
+        }
+    }
+}
+document.getElementById("nameSearch").addEventListener("input", filterStudents);
+document.getElementById("classSearch").addEventListener("input", filterStudents);
+</script>
+
+</body>
+</html>
